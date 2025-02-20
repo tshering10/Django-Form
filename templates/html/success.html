@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Success Page</title>
+</head>
+<body>
+    <h1 class="headings">
+        Success Page
+    </h1>
+    <P id="success-view">Your message is submitted successfully. We will be in a touch
+        with you soon.
+    </P>
+    <a href="{% url 'home' %}">Back to home page</a>
+</body>
+</html>

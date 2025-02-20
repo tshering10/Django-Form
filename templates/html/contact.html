@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Contact Page</title>
+</head>
+<body style="background-color: rgb(235, 243, 235);;">
+    <!-- 
+    <form method="POST" >
+        {{form.as_p}}
+    </form> -->
+    <form method="POST" class="contact-form">
+        {% csrf_token %}
+        <div class="container">
+            <h1 class="headings">Contact Form</h1>
+            <p>
+                <label for="name">Name:</label>
+                {{form.name}}
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                {{form.email}}
+            </p>
+            <p>
+                <label for="message">Message:</label>
+                {{form.message}}
+            </p>
+            <button type="submit" id="btn-contact">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

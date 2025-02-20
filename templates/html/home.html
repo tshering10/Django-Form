@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1 class="headings">Welcome to Daemon's Form.com</h1>
+    <form action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" id="btn-home">Click here to send message</button>
+    </form>
+</body>
+</html>
