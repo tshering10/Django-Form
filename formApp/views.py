@@ -16,12 +16,12 @@ def contact_view(request):
             
             #save data into database
             #method 1
-            # from .models import User
-            # User.objects.create(name=name, email=email, message=message)
+          
+            User.objects.create(name=name, email=email, message=message)
             
             #method 2
-            data = User( name = name, email = email, message = message)
-            data.save()
+            # data = User( name = name, email = email, message = message)
+            # data.save()
             
             #to update data set the id then do
             
